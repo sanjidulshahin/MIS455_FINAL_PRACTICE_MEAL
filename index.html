@@ -27,16 +27,18 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarNav">
-            <form class="form-inline ml-auto my-2 my-lg-0">
+            <form class="form-inline ml-auto my-2 my-lg-0" id="search-form">
               <input
                 class="form-control mr-sm-2"
                 type="search"
                 placeholder="Search..."
                 aria-label="Search"
+                id="search-input"
               />
               <button
                 class="btn btn-outline-success my-2 my-sm-0"
                 type="submit"
+                id="search-btn"
               >
                 Search
               </button>
@@ -47,7 +49,14 @@
     </header>
 
     <section class="main-content">
-      <div class="container"></div>
+      <div class="container">
+        <div id="result-heading" class="mt-4"></div>
+        <div id="meals" class="meals row mt-4"></div>
+        <div id="single-meal" class="single-meal"></div>
+        <div id="show-all" class="text-center mt-4 mb-4" style="display: none">
+          <button class="btn btn-secondary">Show All</button>
+        </div>
+      </div>
     </section>
 
     <footer class="bg-dark text-white text-center py-3">
@@ -55,9 +64,10 @@
         <p>&copy; 2024 TheMealDB</p>
       </div>
     </footer>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="scripts.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
