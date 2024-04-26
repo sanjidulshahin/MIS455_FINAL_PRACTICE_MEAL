@@ -73,27 +73,8 @@ function addMealToDom(meal) {
       break;
     }
   }
-  singleMealEl.innerHTML = `
-    <div class="card">
-      <img src="${meal.strMealThumb}" class="card-img-top" alt="${
-    meal.strMeal
-  }">
-      <div class="card-body">
-        <h2 class="card-title">${meal.strMeal}</h2>
-        <h5 class="card-subtitle mb-2 text-muted">${meal.strCategory}</h5>
-        <p class="card-text">${meal.strInstructions}</p>
-        <h3>Ingredients</h3>
-        <ul class="list-group">
-          ${ingredients
-            .map(
-              (ingredient) => `<li class="list-group-item">${ingredient}</li>`
-            )
-            .join("")}
-        </ul>
-      </div>
-    </div>
-  `;
-}
+  
+  
 
 searchForm.addEventListener("submit", searchMeal);
 showAllBtn.addEventListener("click", displayAllMeals);

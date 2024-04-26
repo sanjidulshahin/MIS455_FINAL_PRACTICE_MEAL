@@ -77,6 +77,9 @@ nav {
   animation: fadeIn 1s ease-in-out;
   min-height: calc(100vh - 160px); /* Adjust height for header and footer */
 }
+.modal-dialog {
+  max-width: 400px; /* Set your desired width */
+}
 
 /* Footer styles */
 footer {
