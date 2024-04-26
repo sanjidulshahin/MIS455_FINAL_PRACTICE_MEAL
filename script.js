@@ -73,8 +73,26 @@ function addMealToDom(meal) {
       break;
     }
   }
-  
-  
+
+  const modalBody = document.getElementById("modal-body");
+
+  // Populate modal with meal details
+  modalBody.innerHTML = `
+    <img src="${meal.strMealThumb}" class="card-img-top" alt="${meal.strMeal}">
+    <h2 class="card-title">${meal.strMeal}</h2>
+    <h5 class="card-subtitle mb-2 text-muted">${meal.strCategory}</h5>
+    <p class="card-text">${meal.strInstructions}</p>
+    <h3>Ingredients</h3>
+    <ul class="list-group">
+      ${ingredients
+        .map((ingredient) => `<li class="list-group-item">${ingredient}</li>`)
+        .join("")}
+    </ul>
+  `;
+
+  // Show the modal
+  $("#mealModal").modal("show");
+}
 
 searchForm.addEventListener("submit", searchMeal);
 showAllBtn.addEventListener("click", displayAllMeals);
